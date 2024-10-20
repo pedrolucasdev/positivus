@@ -16,7 +16,7 @@ export function Process(
       onClick={() => onClickCallback(step)}
       className={`${
         isExpanded ? "bg-green" : "bg-light"
-      } flex min-h-[159px] flex-col border border-dark p-[50px] w-full rounded-[45px] dark-shadow hover:bg-green cursor-pointer pl-[60px] pr-[60px] pb-10 pt-10`}
+      }  flex min-h-[159px] flex-col border border-dark p-[50px] w-full rounded-[45px] dark-shadow hover:bg-green cursor-pointer pl-[60px] pr-[60px] pb-10 pt-10`}
     >
       <div className="flex items-center w-full">
         <span className="text-[60px] mr-[25px]">{step}</span>

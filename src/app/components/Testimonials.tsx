@@ -76,14 +76,17 @@ export default function Testimonials() {
   const OPTIONS: EmblaOptionsType = { loop: true };
   return (
     <section className="flex flex-col mt-[163px]">
-      <div className="flex">
+      <div className="flex" data-aos="fade-down">
         <Title>Testimonials</Title>
         <p className="max-w-[580px]">
           Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
           about Our Digital Marketing Services
         </p>
       </div>
-      <div className="flex bg-dark w-full h-[625px] rounded-[45px] pt-[84px] pb-[68px] flex-col">
+      <div
+        className="flex bg-dark w-full h-[625px] rounded-[45px] pt-[84px] pb-[68px] flex-col"
+        data-aos="fade-up"
+      >
         <Carousel slides={testmonials} options={OPTIONS} />
       </div>
     </section>

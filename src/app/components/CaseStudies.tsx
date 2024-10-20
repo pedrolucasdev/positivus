@@ -4,14 +4,17 @@ import Image from "next/image";
 export default function CaseStudies() {
   return (
     <section className="flex flex-col mt-[163px]" id="use-cases">
-      <div className="flex">
+      <div className="flex" data-aos="fade-down">
         <Title>Case Studies</Title>
         <p className="max-w-[580px]">
           Explore Real-Life Examples of Our Proven Digital Marketing Success
           through Our Case Studies
         </p>
       </div>
-      <div className="flex rounded-[45px] bg-dark h-[326px] pb-[70px] pt-[70px] pl-[60px] pr-[60px]">
+      <div
+        className="flex rounded-[45px] bg-dark h-[326px] pb-[70px] pt-[70px] pl-[60px] pr-[60px]"
+        data-aos="fade-up"
+      >
         <div className="flex flex-col w-full text-white">
           <p>
             For a local restaurant, we implemented a targeted PPC campaign that

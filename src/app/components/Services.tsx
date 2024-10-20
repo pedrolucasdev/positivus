@@ -11,9 +11,10 @@ function Service(props: {
   heading: string;
   description: string;
   style: string;
+  firstChild: boolean;
   children: React.ReactNode;
 }) {
-  const { heading, description, style, children } = props;
+  const { heading, description, style, children, firstChild } = props;
   const wrapperBaxground =
     style == ServiceStyle.light
       ? "bg-light"
@@ -24,9 +25,11 @@ function Service(props: {
   const arrow = style == ServiceStyle.dark ? "arrow" : "arrow_green";
   const arrowColor = style == ServiceStyle.dark ? "text-white" : "text-dark";
   const arrowBackground = style == ServiceStyle.dark ? "bg-white" : "bg-dark";
+  const fade = firstChild ? "fade-right" : "fade-left";
   return (
     <div
       className={`${wrapperBaxground} flex h-[310px] border border-dark p-[50px] w-full rounded-[45px] dark-shadow`}
+      data-aos={fade}
     >
       <div className="flex flex-col max-w-[230px] h-full">
         <h3 className={`${titleBackground} rounded-[7px] pl-[7px] pr-[7px] `}>
@@ -59,7 +62,7 @@ function Service(props: {
 export default function Services() {
   return (
     <section className="flex flex-col mt-[120px]" id="services">
-      <div className="flex">
+      <div className="flex" data-aos="fade-down">
         <Title>Services</Title>
         <p className="max-w-[580px]">
           At our digital marketing agency, we offer a range of services to help
@@ -72,6 +75,7 @@ export default function Services() {
             heading="Search engine"
             description="optimization"
             style={ServiceStyle.light}
+            firstChild={true}
           >
             <Image
               src="/images/search.svg"
@@ -84,6 +88,7 @@ export default function Services() {
             heading="Pay-per-click"
             description="advertising"
             style={ServiceStyle.green}
+            firstChild={false}
           >
             <Image
               src="/images/click.svg"
@@ -98,6 +103,7 @@ export default function Services() {
             heading="Social Media"
             description="Marketing"
             style={ServiceStyle.green}
+            firstChild={true}
           >
             <Image
               src="/images/social.svg"
@@ -110,6 +116,7 @@ export default function Services() {
             heading="Email"
             description="Marketing"
             style={ServiceStyle.light}
+            firstChild={false}
           >
             <Image
               src="/images/email.svg"
@@ -124,6 +131,7 @@ export default function Services() {
             heading="Content"
             description="Creation"
             style={ServiceStyle.light}
+            firstChild={true}
           >
             <Image
               src="/images/content.svg"
@@ -136,6 +144,7 @@ export default function Services() {
             heading="Analytics and"
             description="tracking"
             style={ServiceStyle.green}
+            firstChild={false}
           >
             <Image
               src="/images/analytics.svg"

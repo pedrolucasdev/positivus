@@ -11,6 +11,7 @@ export function TeamMember(
     <div
       className="flex h-[340px] border border-dark w-full rounded-[45px] dark-shadow p-[35px] flex-col"
       id="about-us"
+      data-aos="fade-up"
     >
       <div className="flex h-[102px] items-end">
         <Image
@@ -33,7 +34,7 @@ export function TeamMember(
 export default function Team() {
   return (
     <section className="flex flex-col mt-[140px]">
-      <div className="flex">
+      <div className="flex" data-aos="fade-down">
         <Title>Team</Title>
         <p className="max-w-[580px]">
           Meet the skilled and experienced team behind our successful digital

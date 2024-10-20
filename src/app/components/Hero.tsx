@@ -6,13 +6,15 @@ export default function Header() {
     <section className="flex w-full justify-center">
       <div className="flex mt-[8%] w-full ">
         <div className="flex max-w-[531px] flex-col">
-          <h1>Navigating the digital landscape for success</h1>
-          <p className="mt-9">
+          <h1 data-aos="fade-down">
+            Navigating the digital landscape for success
+          </h1>
+          <p className="mt-9" data-aos="fade-right">
             Our digital marketing agency helps businesses grow and succeed
             online through a range of services including SEO, PPC, social media
             marketing, and content creation.
           </p>
-          <div className="flex mt-9">
+          <div className="flex mt-9" data-aos="fade-up">
             <Link href="mailto:positivus@gmail.com" style="dark">
               Book a consultation
             </Link>
@@ -24,6 +26,7 @@ export default function Header() {
           height={515}
           alt="Hero"
           className="ml-auto"
+          data-aos="zoom-in"
         ></Image>
       </div>
     </section>
