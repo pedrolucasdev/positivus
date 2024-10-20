@@ -8,7 +8,10 @@ export function TeamMember(
   description: string
 ) {
   return (
-    <div className="flex h-[340px] border border-dark w-full rounded-[45px] dark-shadow p-[35px] flex-col">
+    <div
+      className="flex h-[340px] border border-dark w-full rounded-[45px] dark-shadow p-[35px] flex-col"
+      id="about-us"
+    >
       <div className="flex h-[102px] items-end">
         <Image
           src={`/images/${image}`}
@@ -17,7 +20,7 @@ export function TeamMember(
           alt="avatar"
         ></Image>
         <div className="flex flex-col ml-[20px]">
-          <h4>{name}</h4>
+          <p className="text-[20px] font-medium">{name}</p>
           <p>{position}</p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CaseStudies() {
   return (
-    <section className="flex flex-col mt-[163px]">
+    <section className="flex flex-col mt-[163px]" id="use-cases">
       <div className="flex">
         <Title>Case Studies</Title>
         <p className="max-w-[580px]">

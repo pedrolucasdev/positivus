@@ -60,7 +60,9 @@ export default function Footer() {
       </div>
       <div className="flex mt-[60px] h-[185px]">
         <div className="flex flex-col h-full min-w-[350px]">
-          <h4 className="bg-green w-fit text-dark font-medium">Contact us:</h4>
+          <p className="bg-green w-fit text-dark font-medium text-[20px]">
+            Contact us:
+          </p>
           <div className="flex flex-col h-full justify-between mt-[26px]">
             <p className="text-dark mt-[9px]">Email: info@positivus.com</p>
             <p className="text-dark mt-[9px]">Phone: 555-567-8901</p>

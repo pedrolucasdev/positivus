@@ -58,7 +58,7 @@ function Service(props: {
 
 export default function Services() {
   return (
-    <section className="flex flex-col mt-[120px]">
+    <section className="flex flex-col mt-[120px]" id="services">
       <div className="flex">
         <Title>Services</Title>
         <p className="max-w-[580px]">
