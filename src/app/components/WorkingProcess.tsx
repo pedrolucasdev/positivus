@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Title from "./common/Title";
 import Image from "next/image";
 
 export function Process(

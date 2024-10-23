@@ -59,7 +59,7 @@ const Carousel: React.FC<PropType> = (props) => {
       <div className="flex items-center mt-auto justify-center">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <div className="flex items-center ml-[189px] mr-[189px]">
-          {scrollSnaps.map((_: any, index: number) => (
+          {scrollSnaps.map((_: number, index: number) => (
             <StarButton
               key={index}
               onClick={() => onStarButtonClick(index)}

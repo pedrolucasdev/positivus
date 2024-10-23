@@ -7,7 +7,7 @@ export const AOSInit = () => {
   useEffect(() => {
     AOS.init({
       disable: function () {
-        var maxWidth = 800;
+        const maxWidth = 800;
         return window.innerWidth < maxWidth;
       },
       offset: 100,

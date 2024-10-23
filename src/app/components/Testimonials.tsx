@@ -43,7 +43,7 @@ const testmonials: Testmonial[] = [
       <p>
         This agency has been incredible to work with. Their expertise and
         hands-on approach transformed our marketing efforts, delivering great
-        results quickly. We're seeing better engagement and growth, and
+        results quickly. We&apos;re seeing better engagement and growth, and
         couldn&apos;t be happier!
       </p>
     ),

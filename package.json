@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "run-build": "npx serve@latest out"
   },
   "dependencies": {
     "@types/aos": "^3.0.7",
