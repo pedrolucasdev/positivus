@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Sponsors() {
   return (
-    <div className="flex mt-24 justify-between">
+    <div className="flex mt-[60px] md:mt-24 justify-between flex-wrap md:flex-nowrap gap-[32px]  md:gap-0 pl-5 xl:pl-0 pr-5 xl:pr-0">
       <Image
         src="/images/amazon.svg"
         width={124}

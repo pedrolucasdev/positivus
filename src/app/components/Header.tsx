@@ -3,14 +3,15 @@ import Link from "./common/Link";
 
 export default function Header() {
   return (
-    <header className="flex">
+    <header className="flex pl-5 xl:pl-0 pr-5 xl:pr-0 items-center">
       <Image
         src="/images/logo.svg"
         width={220}
         height={36}
         alt="Positivus"
+        className="h-[26px] md:h-[36px] w-[144px] md:w-[220px]"
       ></Image>
-      <nav className="flex ml-auto">
+      <nav className="hidden md:flex ml-auto">
         <ul className="flex">
           <li className="ml-3">
             <Link href="#about-us" style="plain">

@@ -19,7 +19,7 @@ export default function Link(props: {
   return (
     <a
       href={href}
-      className={`${headerMenuClassName} h-14 p-4 rounded-[14px] flex justify-center items-center`}
+      className={`${headerMenuClassName} h-14 w-full md:w-auto p-0 md:p-4 rounded-[14px] flex justify-center items-center`}
     >
       {children}
     </a>

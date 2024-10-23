@@ -1,3 +1,5 @@
+"use client";
+
 import Title from "./common/Title";
 import Image from "next/image";
 
@@ -6,7 +8,6 @@ enum ServiceStyle {
   dark = "dark",
   green = "green",
 }
-
 function Service(props: {
   heading: string;
   description: string;
@@ -26,10 +27,17 @@ function Service(props: {
   const arrowColor = style == ServiceStyle.dark ? "text-white" : "text-dark";
   const arrowBackground = style == ServiceStyle.dark ? "bg-white" : "bg-dark";
   const fade = firstChild ? "fade-right" : "fade-left";
+  const redirectUserToService = () => {
+    window.location.href = "";
+  };
   return (
     <div
-      className={`${wrapperBaxground} flex h-[310px] border border-dark p-[50px] w-full rounded-[45px] dark-shadow`}
+      className={`${wrapperBaxground} flex h-[310px] border border-dark p-[50px] w-full md:w-[48%] xl:w-full rounded-[45px] dark-shadow md:flex-row flex-col pointer`}
       data-aos={fade}
+      onClick={($event) => {
+        redirectUserToService();
+        $event.stopPropagation();
+      }}
     >
       <div className="flex flex-col max-w-[230px] h-full">
         <h3 className={`${titleBackground} rounded-[7px] pl-[7px] pr-[7px] `}>
@@ -38,7 +46,10 @@ function Service(props: {
         <h3 className={`${titleBackground} rounded-[7px] pl-[7px] pr-[7px]`}>
           {description}
         </h3>
-        <a className={`${arrowColor} flex mt-auto items-center`} href="">
+        <a
+          className={`${arrowColor}  hidden md:flex mt-auto items-center `}
+          href=""
+        >
           <span
             className={`${arrowBackground} ${arrowColor} rounded-full w-[40px] h-[40px] flex items-center justify-center mr-4`}
           >
@@ -52,7 +63,7 @@ function Service(props: {
           Learn more
         </a>
       </div>
-      <div className="relative ml-auto block w-[210px] h-[210px]">
+      <div className="relative flex md:block w-full h-[275px] md:w-[210px] md:h-[210px] ml-0 md:ml-auto">
         {children}
       </div>
     </div>
@@ -61,16 +72,22 @@ function Service(props: {
 
 export default function Services() {
   return (
-    <section className="flex flex-col mt-[120px]" id="services">
-      <div className="flex" data-aos="fade-down">
+    <section
+      className="flex flex-col mt-[60px] md:mt-[120px] pl-5 xl:pl-0 pr-5 xl:pr-0"
+      id="services"
+    >
+      <div
+        className="items-center md:items-start flex-col md:flex-row flex"
+        data-aos="fade-down"
+      >
         <Title>Services</Title>
-        <p className="max-w-[580px]">
+        <p className="max-w-[580px] mt-[30px] md:mt-0">
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </p>
       </div>
-      <div className="flex flex-col w-full">
-        <div className="flex gap-10 justify-between">
+      <div className="flex flex-col w-full mt-10 md:mt-0">
+        <div className="flex gap-10 justify-between md:flex-row flex-col">
           <Service
             heading="Search engine"
             description="optimization"
@@ -98,7 +115,7 @@ export default function Services() {
             ></Image>
           </Service>
         </div>
-        <div className="flex gap-10 justify-between mt-10">
+        <div className="flex gap-10 justify-between mt-10 md:flex-row flex-col">
           <Service
             heading="Social Media"
             description="Marketing"
@@ -126,7 +143,7 @@ export default function Services() {
             ></Image>
           </Service>
         </div>
-        <div className="flex gap-10 justify-between mt-10">
+        <div className="flex gap-10 justify-between mt-10 md:flex-row flex-col">
           <Service
             heading="Content"
             description="Creation"

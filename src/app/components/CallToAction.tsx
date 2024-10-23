@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function CallToAction() {
   return (
-    <section className="flex h-[347px] bg-light rounded-[45px] mt-[125px] relative">
+    <section className="flex md:h-[347px] bg-white md:bg-light rounded-[45px] mt-[70px] md:mt-[125px] relative pl-5 xl:pl-0 pr-5 xl:pr-0">
       <div
-        className="flex ml-[60px] mt-[60px] mb-[60px] flex-col max-w-[500px]"
+        className="p-[50px] md:p-0 flex md:ml-[60px] md:mt-[60px] md:mb-[60px] flex-col md:max-w-[500px] bg-light rounded-[45px] md:rounded-[0px]"
         data-aos="fade-right"
       >
         <h3>Let&apos;s make things happen</h3>
@@ -24,7 +24,7 @@ export default function CallToAction() {
         width={360}
         height={394}
         alt="Hero"
-        className="absolute right-[135px] bottom-[-30px]"
+        className="hidden md:flex absolute right-[50px] bottom-[-30px] xl:right-[135px] xl:bottom-[-30px]"
         data-aos="fade-left"
       ></Image>
     </section>

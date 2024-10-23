@@ -75,7 +75,7 @@ const testmonials: Testmonial[] = [
 export default function Testimonials() {
   const OPTIONS: EmblaOptionsType = { loop: true };
   return (
-    <section className="flex flex-col mt-[163px]">
+    <section className="md:flex flex-col mt-[163px] hidden pl-5 xl:pl-0 pr-5 xl:pr-0">
       <div className="flex" data-aos="fade-down">
         <Title>Testimonials</Title>
         <p className="max-w-[580px]">

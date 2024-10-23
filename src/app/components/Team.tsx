@@ -33,16 +33,19 @@ export function TeamMember(
 
 export default function Team() {
   return (
-    <section className="flex flex-col mt-[140px]">
-      <div className="flex" data-aos="fade-down">
+    <section className="flex flex-col mt-[60px] md:mt-[140px] pl-5 xl:pl-0 pr-5 xl:pr-0">
+      <div
+        className="items-center md:items-start flex-col md:flex-row flex"
+        data-aos="fade-down"
+      >
         <Title>Team</Title>
-        <p className="max-w-[580px]">
+        <p className="max-w-[580px] mt-[30px] md:mt-0">
           Meet the skilled and experienced team behind our successful digital
           marketing strategies
         </p>
       </div>
-      <div className="flex flex-col w-full gap-10">
-        <div className="flex gap-10">
+      <div className="flex flex-col w-full gap-10 mt-[30px] md:mt-0">
+        <div className="flex gap-[30px] md:gap-10 md:flex-row flex-col md:flex-wrap xl:flex-nowrap">
           {TeamMember(
             "john.svg",
             "John Smith",
@@ -62,7 +65,7 @@ export default function Team() {
             "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization"
           )}
         </div>
-        <div className="flex gap-10">
+        <div className="flex gap-[30px] md:gap-10 md:flex-row flex-col md:flex-wrap xl:flex-nowrap">
           {TeamMember(
             "emily.svg",
             "Emily Johnson",
