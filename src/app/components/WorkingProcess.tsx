@@ -18,8 +18,10 @@ export function Process(
       }  flex min-h-[98px] md:min-h-[159px] flex-col border border-dark p-[30px] md:p-[50px] w-full rounded-[45px] dark-shadow hover:bg-green cursor-pointer`}
     >
       <div className="flex items-center w-full">
-        <span className="text-[30px] md:text-[60px] mr-[25px]">{step}</span>
-        <h3 className="text-[18px] md:text-[30px] md:max-w-none max-w-[55%]">
+        <span className="text-[30px] md:text-[60px] mr-[25px] step">
+          {step}
+        </span>
+        <h3 className="text-[18px] md:text-[30px] md:max-w-none max-w-[55%] title">
           {title}
         </h3>
         <span className="flex ml-auto w-[30px] h-[30px] md:w-[58px] md:h-[58px] border border-dark rounded-full justify-center items-center">
@@ -35,7 +37,7 @@ export function Process(
       {isExpanded ? (
         <>
           <div className="flex w-full h-[1px] bg-dark mt-[30px] mb-[30px]"></div>
-          <p>{description}</p>
+          <p className="description">{description}</p>
         </>
       ) : (
         <></>

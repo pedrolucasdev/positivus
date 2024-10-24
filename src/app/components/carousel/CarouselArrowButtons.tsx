@@ -64,7 +64,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
         width={20}
         height={20}
         alt="previous"
-        className="opacity-30 hover:opacity-100"
+        className="opacity-30 hover:opacity-100 carousel-prev-button"
       ></Image>
     </button>
   );
@@ -80,7 +80,7 @@ export const NextButton: React.FC<PropType> = (props) => {
         width={20}
         height={20}
         alt="next"
-        className="opacity-30 hover:opacity-100"
+        className="opacity-30 hover:opacity-100 carousel-next-button"
       ></Image>
     </button>
   );

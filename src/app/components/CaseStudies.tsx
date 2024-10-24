@@ -12,7 +12,7 @@ export default function CaseStudies() {
         data-aos="fade-down"
       >
         <Title>Case Studies</Title>
-        <p className="max-w-[580px]  mt-[30px] xl:mt-0">
+        <p className="max-w-[580px]  mt-[30px] xl:mt-0 description">
           Explore Real-Life Examples of Our Proven Digital Marketing Success
           through Our Case Studies
         </p>
@@ -22,7 +22,7 @@ export default function CaseStudies() {
         data-aos="fade-up"
       >
         <div className="flex flex-col w-full text-white bg-dark rounded-[45px] xl:round-[0px] p-10 xl:p-0 mt-[30px]  md:mt-[60px] xl:mt-0">
-          <p>
+          <p className="case-study">
             For a local restaurant, we implemented a targeted PPC campaign that
             resulted in a 50% increase in website traffic and a 25% increase in
             sales.
@@ -40,7 +40,7 @@ export default function CaseStudies() {
         </div>
         <div className="hidden xl:flex h-full w-[1px] bg-white ml-16 mr-16"></div>
         <div className="flex flex-col w-full text-white bg-dark rounded-[45px] xl:round-[0px] p-10 xl:p-0 mt-[30px]  md:mt-[60px] xl:mt-0">
-          <p>
+          <p className="case-study">
             For a B2B software company, we developed an SEO strategy that
             resulted in a first page ranking for key keywords and a 200%
             increase in organic traffic.
@@ -58,7 +58,7 @@ export default function CaseStudies() {
         </div>
         <div className="hidden h-full w-[1px] bg-white ml-16 mr-16 xl:flex"></div>
         <div className="flex flex-col w-full text-white bg-dark rounded-[45px] xl:round-[0px] p-10 xl:p-0 mt-[30px]  md:mt-[60px] xl:mt-0">
-          <p>
+          <p className="case-study">
             For a national retail chain, we created a social media marketing
             campaign that increased followers by 25% and generated a 20%
             increase in online sales.

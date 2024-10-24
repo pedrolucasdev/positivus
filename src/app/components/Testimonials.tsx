@@ -78,7 +78,7 @@ export default function Testimonials() {
     <section className="md:flex flex-col mt-[163px] hidden pl-5 xl:pl-0 pr-5 xl:pr-0">
       <div className="flex" data-aos="fade-down">
         <Title>Testimonials</Title>
-        <p className="max-w-[580px]">
+        <p className="max-w-[580px] description">
           Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
           about Our Digital Marketing Services
         </p>

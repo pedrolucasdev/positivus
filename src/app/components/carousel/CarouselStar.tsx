@@ -72,6 +72,7 @@ export const StarButton: React.FC<StarButtonPropsType> = (props) => {
         }
         width={14}
         height={14}
+        className="carousel-star-button"
         alt="star"
       ></Image>
     </button>

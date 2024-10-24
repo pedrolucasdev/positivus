@@ -32,7 +32,7 @@ function Service(props: {
   };
   return (
     <div
-      className={`${wrapperBaxground} flex h-[310px] border border-dark p-[50px] w-full md:w-[48%] xl:w-full rounded-[45px] dark-shadow md:flex-row flex-col pointer`}
+      className={`${wrapperBaxground} service flex h-[310px] border border-dark p-[50px] w-full md:w-[48%] xl:w-full rounded-[45px] dark-shadow md:flex-row flex-col pointer`}
       data-aos={fade}
       onClick={($event) => {
         redirectUserToService();
@@ -40,7 +40,9 @@ function Service(props: {
       }}
     >
       <div className="flex flex-col max-w-[230px] h-full">
-        <h3 className={`${titleBackground} rounded-[7px] pl-[7px] pr-[7px] `}>
+        <h3
+          className={`${titleBackground} rounded-[7px] pl-[7px] pr-[7px] serviceTitle`}
+        >
           {heading}
         </h3>
         <h3 className={`${titleBackground} rounded-[7px] pl-[7px] pr-[7px]`}>
@@ -81,7 +83,7 @@ export default function Services() {
         data-aos="fade-down"
       >
         <Title>Services</Title>
-        <p className="max-w-[580px] mt-[30px] md:mt-0">
+        <p className="max-w-[580px] mt-[30px] md:mt-0 description">
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </p>

@@ -9,7 +9,7 @@ export function TeamMember(
 ) {
   return (
     <div
-      className="flex h-[340px] border border-dark w-full rounded-[45px] dark-shadow p-[35px] flex-col"
+      className="flex h-[340px] border border-dark w-full rounded-[45px] dark-shadow p-[35px] flex-col team-member"
       id="about-us"
       data-aos="fade-up"
     >
@@ -39,7 +39,7 @@ export default function Team() {
         data-aos="fade-down"
       >
         <Title>Team</Title>
-        <p className="max-w-[580px] mt-[30px] md:mt-0">
+        <p className="max-w-[580px] mt-[30px] md:mt-0 description">
           Meet the skilled and experienced team behind our successful digital
           marketing strategies
         </p>

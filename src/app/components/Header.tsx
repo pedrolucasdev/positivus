@@ -9,7 +9,7 @@ export default function Header() {
         width={220}
         height={36}
         alt="Positivus"
-        className="h-[26px] md:h-[36px] w-[144px] md:w-[220px]"
+        className="h-[26px] md:h-[36px] w-[144px] md:w-[220px] header-logo"
       ></Image>
       <nav className="hidden md:flex ml-auto">
         <ul className="flex">

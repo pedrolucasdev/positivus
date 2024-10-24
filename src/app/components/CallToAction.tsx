@@ -9,7 +9,7 @@ export default function CallToAction() {
         data-aos="fade-right"
       >
         <h3>Let&apos;s make things happen</h3>
-        <p className="mt-[26px]">
+        <p className="mt-[26px] call-to-action">
           Contact us today to learn more about how our digital marketing
           services can help your business grow and succeed online.
         </p>

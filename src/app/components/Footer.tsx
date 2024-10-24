@@ -10,7 +10,7 @@ export default function Footer() {
           width={189}
           height={29}
           alt="Positivus"
-          className="h-[23px] md:h-[29px] w-[144px] md:w-[189px]"
+          className="h-[23px] md:h-[29px] w-[144px] md:w-[189px] footer-logo"
         ></Image>
         <div className="flex flex-col md:flex-row gap-[30px] md:gap-0 items-center">
           <a href="" className="text-[18px] underline text-dark">
@@ -69,7 +69,7 @@ export default function Footer() {
               Email: info@positivus.com
             </p>
             <p className="text-dark mt-[30px] md:mt-[9px]">
-              Phone: 555-567-8901
+              Phone: 555-567-8924
             </p>
             <p className="text-dark mt-[30px] md:mt-[9px]">
               Address: 1234 Main St <br /> Moonstone City, Stardust State 12345
@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
         </div>
         <span className="ml-0 md:ml-[154px] bg-[#edebeb] h-full w-full text-dark justify-center items-center flex rounded-[14px] p-10">
-          <div className="inline-block">
+          <div className="inline-block mock-ref">
             This is a mock project based on{" "}
             <a
               href="https://www.figma.com/community/file/1230604708032389430"

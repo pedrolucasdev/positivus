@@ -49,10 +49,12 @@ const Carousel: React.FC<PropType> = (props) => {
 
       <div className="flex w-full mt-[24px] justify-center">
         <div className="flex flex-col w-[606px] pl-20">
-          <p className="text-green text-[20px] font-medium">
+          <p className="text-green text-[20px] font-medium testimonial-author">
             {slides[selectedIndex].author}
           </p>
-          <p className="text-white">{slides[selectedIndex].position}</p>
+          <p className="text-white testimonial-position">
+            {slides[selectedIndex].position}
+          </p>
         </div>
       </div>
 
