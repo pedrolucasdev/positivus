@@ -1,6 +1,6 @@
 # Positivus
 
-DEMO 👉
+DEMO 👉 https://positivus.pedro-lucas.pt/
 
 This is a mock project based on [this design](https://www.figma.com/community/file/1230604708032389430) by Olga Averchenko. Please check out her beautiful work.
 

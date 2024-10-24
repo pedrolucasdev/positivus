@@ -86,6 +86,13 @@ export default function Footer() {
               this design
             </a>{" "}
             by Olga Averchenko. Please check out her beautiful work.
+            <br />
+            <a
+              href="https://github.com/pedrolucasdev/positivus"
+              className="underline text-[18px]"
+            >
+              GitHub repository
+            </a>
           </div>
         </span>
       </div>
