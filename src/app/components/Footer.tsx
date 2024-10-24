@@ -82,6 +82,7 @@ export default function Footer() {
             <a
               href="https://www.figma.com/community/file/1230604708032389430"
               className="underline text-[18px]"
+              target="_blank"
             >
               this design
             </a>{" "}
@@ -90,6 +91,7 @@ export default function Footer() {
             <a
               href="https://github.com/pedrolucasdev/positivus"
               className="underline text-[18px]"
+              target="_blank"
             >
               GitHub repository
             </a>
