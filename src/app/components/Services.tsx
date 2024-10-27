@@ -33,7 +33,6 @@ function Service(props: {
   return (
     <div
       className={`${wrapperBaxground} service flex h-[310px] border border-dark p-[50px] w-full md:w-[48%] xl:w-full rounded-[45px] dark-shadow md:flex-row flex-col pointer`}
-      data-aos={fade}
       onClick={($event) => {
         redirectUserToService();
         $event.stopPropagation();
@@ -78,10 +77,7 @@ export default function Services() {
       className="flex flex-col mt-[60px] md:mt-[120px] pl-5 xl:pl-0 pr-5 xl:pr-0"
       id="services"
     >
-      <div
-        className="items-center md:items-start flex-col md:flex-row flex"
-        data-aos="fade-down"
-      >
+      <div className="items-center md:items-start flex-col md:flex-row flex">
         <Title>Services</Title>
         <p className="max-w-[580px] mt-[30px] md:mt-0 description">
           At our digital marketing agency, we offer a range of services to help
