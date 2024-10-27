@@ -1,7 +1,9 @@
+"use client";
 import { EmblaOptionsType } from "embla-carousel";
 import Title from "./common/Title";
 import Carousel from "./carousel/Carousel";
 import { ReactElement } from "react";
+import { motion } from "framer-motion";
 
 export type Testmonial = {
   author: string;
@@ -76,16 +78,28 @@ export default function Testimonials() {
   const OPTIONS: EmblaOptionsType = { loop: true };
   return (
     <section className="md:flex flex-col mt-[163px] hidden pl-5 xl:pl-0 pr-5 xl:pr-0">
-      <div className="flex">
+      <motion.div
+        className="flex"
+        initial={{ opacity: 0, y: "-50%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
         <Title>Testimonials</Title>
         <p className="max-w-[580px] description">
           Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
           about Our Digital Marketing Services
         </p>
-      </div>
-      <div className="flex bg-dark w-full h-[625px] rounded-[45px] pt-[84px] pb-[68px] flex-col">
+      </motion.div>
+      <motion.div
+        className="flex bg-dark w-full h-[625px] rounded-[45px] pt-[84px] pb-[68px] flex-col"
+        initial={{ opacity: 0, y: "50%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
         <Carousel slides={testmonials} options={OPTIONS} />
-      </div>
+      </motion.div>
     </section>
   );
 }

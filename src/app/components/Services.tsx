@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Title from "./common/Title";
 import Image from "next/image";
 
@@ -26,17 +27,21 @@ function Service(props: {
   const arrow = style == ServiceStyle.dark ? "arrow" : "arrow_green";
   const arrowColor = style == ServiceStyle.dark ? "text-white" : "text-dark";
   const arrowBackground = style == ServiceStyle.dark ? "bg-white" : "bg-dark";
-  const fade = firstChild ? "fade-right" : "fade-left";
+  const xPosition = firstChild ? "-50%" : "50%";
   const redirectUserToService = () => {
     window.location.href = "";
   };
   return (
-    <div
+    <motion.div
       className={`${wrapperBaxground} service flex h-[310px] border border-dark p-[50px] w-full md:w-[48%] xl:w-full rounded-[45px] dark-shadow md:flex-row flex-col pointer`}
       onClick={($event) => {
         redirectUserToService();
         $event.stopPropagation();
       }}
+      initial={{ opacity: 0, x: xPosition }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
     >
       <div className="flex flex-col max-w-[230px] h-full">
         <h3
@@ -67,23 +72,29 @@ function Service(props: {
       <div className="relative flex md:block w-full h-[275px] md:w-[210px] md:h-[210px] ml-0 md:ml-auto">
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 export default function Services() {
   return (
     <section
-      className="flex flex-col mt-[60px] md:mt-[120px] pl-5 xl:pl-0 pr-5 xl:pr-0"
+      className="flex flex-col mt-[60px] md:mt-[104px] pl-5 xl:pl-0 pr-5 xl:pr-0"
       id="services"
     >
-      <div className="items-center md:items-start flex-col md:flex-row flex">
+      <motion.div
+        className="items-center md:items-start flex-col md:flex-row flex"
+        initial={{ opacity: 0, y: "-50%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
         <Title>Services</Title>
         <p className="max-w-[580px] mt-[30px] md:mt-0 description">
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col w-full mt-10 md:mt-0">
         <div className="flex gap-10 justify-between md:flex-row flex-col">
           <Service

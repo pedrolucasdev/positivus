@@ -1,5 +1,7 @@
+"use client";
 import Title from "./common/Title";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function TeamMember(
   image: string,
@@ -8,9 +10,12 @@ export function TeamMember(
   description: string
 ) {
   return (
-    <div
+    <motion.div
       className="flex h-[340px] border border-dark w-full rounded-[45px] dark-shadow p-[35px] flex-col team-member"
-      id="about-us"
+      initial={{ opacity: 0, y: "50%" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
     >
       <div className="flex h-[102px] items-end">
         <Image
@@ -26,20 +31,29 @@ export function TeamMember(
       </div>
       <div className="flex mt-7 mb-7 h-[1px] w-full bg-dark"></div>
       <p>{description}</p>
-    </div>
+    </motion.div>
   );
 }
 
 export default function Team() {
   return (
-    <section className="flex flex-col mt-[60px] md:mt-[140px] pl-5 xl:pl-0 pr-5 xl:pr-0">
-      <div className="items-center md:items-start flex-col md:flex-row flex">
+    <section
+      className="flex flex-col mt-[60px] md:mt-[140px] pl-5 xl:pl-0 pr-5 xl:pr-0"
+      id="about-us"
+    >
+      <motion.div
+        className="items-center md:items-start flex-col md:flex-row flex"
+        initial={{ opacity: 0, y: "-50%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
         <Title>Team</Title>
         <p className="max-w-[580px] mt-[30px] md:mt-0 description">
           Meet the skilled and experienced team behind our successful digital
           marketing strategies
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col w-full gap-10 mt-[30px] md:mt-0">
         <div className="flex gap-[30px] md:gap-10 md:flex-row flex-col md:flex-wrap xl:flex-nowrap">
           {TeamMember(

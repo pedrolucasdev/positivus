@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 enum LinkStyle {
   plain = "plain",
   dark = "dark",
@@ -17,11 +20,15 @@ export default function Link(props: {
       ? "text-black hover:bg-green border border-dark"
       : "text-black hover:bg-green";
   return (
-    <a
+    <motion.a
       href={href}
       className={`${headerMenuClassName} h-14 w-full md:w-auto p-0 md:p-4 rounded-[14px] flex justify-center items-center link`}
+      whileHover={{ scale: 1.1 }}
+      transition={{
+        ease: "easeInOut",
+      }}
     >
       {children}
-    </a>
+    </motion.a>
   );
 }

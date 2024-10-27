@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-
+import { motion, AnimatePresence } from "framer-motion";
 export function Process(
   onClickCallback: Function,
   isExpanded: boolean,
@@ -34,14 +34,32 @@ export function Process(
           ></Image>
         </span>
       </div>
-      {isExpanded ? (
-        <>
-          <div className="flex w-full h-[1px] bg-dark mt-[30px] mb-[30px]"></div>
-          <p className="description">{description}</p>
-        </>
-      ) : (
-        <></>
-      )}
+      <AnimatePresence initial={false}>
+        {isExpanded && (
+          <motion.div
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: {
+                opacity: 1,
+                height: "auto",
+                transition: { duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] },
+              },
+              collapsed: {
+                opacity: 0,
+                height: 0,
+                transition: { duration: 0.12, ease: [0.04, 0.62, 0.23, 0.98] },
+              },
+            }}
+          >
+            <>
+              <div className="flex w-full h-[1px] bg-dark mt-[30px] mb-[30px]"></div>
+              <p className="description">{description}</p>
+            </>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -97,14 +115,20 @@ export default function WorkingProcess() {
 
   return (
     <section className="flex flex-col mt-[60px] md:mt-[163px] pl-5 xl:pl-0 pr-5 xl:pr-0">
-      <div className="items-center md:items-start flex-col md:flex-row flex">
+      <motion.div
+        className="items-center md:items-start flex-col md:flex-row flex"
+        initial={{ opacity: 0, y: "-50%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
         <h2 className="bg-green w-fit pl-[7px] pr-[7px] md:mr-[40px] md:mb-[80px] rounded-[7px] text-center md:text-start max-w-[250px] md:max-w-none">
           Our Working Process
         </h2>
         <p className="max-w-[580px] mt-[30px] md:mt-0">
           Step-by-Step Guide to Achieving <br></br> Your Business Goals
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col gap-[20px] md:gap-[30px] md:mt-0 mt-[30px]">
         {steps.map((item) =>
           Process(
