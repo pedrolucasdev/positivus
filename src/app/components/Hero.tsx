@@ -56,6 +56,7 @@ export default function Header() {
             width={600}
             height={515}
             alt="Hero"
+            priority
           ></Image>
         </motion.div>
       </div>
