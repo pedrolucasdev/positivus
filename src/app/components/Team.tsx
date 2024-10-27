@@ -43,7 +43,7 @@ export default function Team() {
     >
       <motion.div
         className="items-center md:items-start flex-col md:flex-row flex"
-        initial={{ opacity: 0, y: "-50%" }}
+        initial={{ opacity: 0, y: "-25%" }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}

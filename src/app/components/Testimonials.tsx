@@ -80,7 +80,7 @@ export default function Testimonials() {
     <section className="md:flex flex-col mt-[163px] hidden pl-5 xl:pl-0 pr-5 xl:pr-0">
       <motion.div
         className="flex"
-        initial={{ opacity: 0, y: "-50%" }}
+        initial={{ opacity: 0, y: "-25%" }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}

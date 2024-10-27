@@ -10,7 +10,7 @@ export default function Header() {
         <div className="flex max-w-[531px] flex-col">
           <motion.h1
             className="hero-title"
-            initial={{ opacity: 0, y: "-50%" }}
+            initial={{ opacity: 0, y: "-25%" }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
@@ -25,7 +25,7 @@ export default function Header() {
           ></Image>
           <motion.p
             className="mt-5 md:mt-9 hero-description"
-            initial={{ opacity: 0, x: "-50%" }}
+            initial={{ opacity: 0, x: "-25%" }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
           >

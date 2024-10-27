@@ -8,7 +8,7 @@ export default function CallToAction() {
     <section className="flex md:h-[347px] bg-white md:bg-light rounded-[45px] mt-[70px] md:mt-[125px] relative pl-5 xl:pl-0 pr-5 xl:pr-0">
       <motion.div
         className="p-[50px] md:p-0 flex md:ml-[60px] md:mt-[60px] md:mb-[60px] flex-col md:max-w-[500px] bg-light rounded-[45px] md:rounded-[0px]"
-        initial={{ opacity: 0, x: "-50%" }}
+        initial={{ opacity: 0, x: "-25%" }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}

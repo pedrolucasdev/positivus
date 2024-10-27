@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useEffect } from "react";
 import useMeasure from "react-use-measure";
 import { motion } from "framer-motion";
-import { section } from "framer-motion/client";
 
 interface Sponsor {
   src: string;
@@ -53,15 +52,17 @@ const sponsors: Sponsor[] = [
 ];
 
 export default function Sponsors() {
-  let [ref, { width }] = useMeasure();
+  const [ref, { width }] = useMeasure();
+  const isMobile = width < 768;
+  const marginLeft = isMobile ? 8 : 100;
 
   const xTranslation = useMotionValue(0);
 
   useEffect(() => {
-    let controls;
-    let finalPosition = -width / 2 - 100;
+    if (isMobile) return;
+    const finalPosition = -width / 2 - marginLeft;
 
-    controls = animate(xTranslation, [0, finalPosition], {
+    const controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
       duration: 25,
       repeat: Infinity,
@@ -70,22 +71,30 @@ export default function Sponsors() {
     });
 
     return controls.stop;
-  }, [xTranslation, width]);
+  }, [xTranslation, width, marginLeft, isMobile]);
+
+  const sponsorsList = isMobile ? [...sponsors] : [...sponsors, ...sponsors];
 
   return (
-    <section className="relative flex h-[100px] max-w-[100%] overflow-hidden md:mt-[104px]">
+    <section
+      className={`${
+        isMobile ? "" : "overflow-hidden h-[100px]"
+      } relative flex  max-w-[100%] md:mt-[104px]`}
+    >
       <motion.div
-        className="absolute left-0 top-0 flex mt-[60px] md:mt-0 justify-between flex-wrap md:flex-nowrap gap-[32px] md:gap-0 pl-5 xl:pl-0 pr-5 xl:pr-0"
-        ref={ref}
-        style={{ x: xTranslation }}
+        className={`${
+          isMobile ? "" : "absolute left-0 top-0"
+        } flex mt-[60px] md:mt-0 justify-between flex-wrap md:flex-nowrap gap-[32px] md:gap-0 pl-5 xl:pl-0 pr-5 xl:pr-0`}
+        ref={isMobile ? ref : null}
+        style={isMobile ? {} : { x: xTranslation }}
       >
-        {[...sponsors, ...sponsors].map((item, idx) => (
+        {sponsorsList.map((item, idx) => (
           <Image
             src={item.src}
             width={item.width}
             height={item.height}
             alt={item.alt}
-            className="brightness-0 [&:not(:first-child)]:ml-[100px]"
+            className={`brightness-0 [&:not(:first-child)]:ml-[${marginLeft}px]`}
             key={item.alt + idx}
           ></Image>
         ))}

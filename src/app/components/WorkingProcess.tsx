@@ -117,7 +117,7 @@ export default function WorkingProcess() {
     <section className="flex flex-col mt-[60px] md:mt-[163px] pl-5 xl:pl-0 pr-5 xl:pr-0">
       <motion.div
         className="items-center md:items-start flex-col md:flex-row flex"
-        initial={{ opacity: 0, y: "-50%" }}
+        initial={{ opacity: 0, y: "-25%" }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}

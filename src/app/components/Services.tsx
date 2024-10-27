@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Title from "./common/Title";
 import Image from "next/image";
@@ -27,7 +26,7 @@ function Service(props: {
   const arrow = style == ServiceStyle.dark ? "arrow" : "arrow_green";
   const arrowColor = style == ServiceStyle.dark ? "text-white" : "text-dark";
   const arrowBackground = style == ServiceStyle.dark ? "bg-white" : "bg-dark";
-  const xPosition = firstChild ? "-50%" : "50%";
+  const xPosition = firstChild ? "-25%" : "50%";
   const redirectUserToService = () => {
     window.location.href = "";
   };
@@ -84,7 +83,7 @@ export default function Services() {
     >
       <motion.div
         className="items-center md:items-start flex-col md:flex-row flex"
-        initial={{ opacity: 0, y: "-50%" }}
+        initial={{ opacity: 0, y: "-25%" }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
