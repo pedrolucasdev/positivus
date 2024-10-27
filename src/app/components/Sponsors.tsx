@@ -53,14 +53,10 @@ const sponsors: Sponsor[] = [
 
 export default function Sponsors() {
   const [ref, { width }] = useMeasure();
-  const isMobile = width < 768;
-  const marginLeft = isMobile ? 8 : 100;
-
   const xTranslation = useMotionValue(0);
 
   useEffect(() => {
-    if (isMobile) return;
-    const finalPosition = -width / 2 - marginLeft;
+    const finalPosition = -width / 2 - 100;
 
     const controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
@@ -71,34 +67,42 @@ export default function Sponsors() {
     });
 
     return controls.stop;
-  }, [xTranslation, width, marginLeft, isMobile]);
-
-  const sponsorsList = isMobile ? [...sponsors] : [...sponsors, ...sponsors];
+  }, [xTranslation, width]);
 
   return (
-    <section
-      className={`${
-        isMobile ? "" : "overflow-hidden h-[100px]"
-      } relative flex  max-w-[100%] md:mt-[104px]`}
-    >
-      <motion.div
-        className={`${
-          isMobile ? "" : "absolute left-0 top-0"
-        } flex mt-[60px] md:mt-0 justify-between flex-wrap md:flex-nowrap gap-[32px] md:gap-0 pl-5 xl:pl-0 pr-5 xl:pr-0`}
-        ref={isMobile ? ref : null}
-        style={isMobile ? {} : { x: xTranslation }}
-      >
-        {sponsorsList.map((item, idx) => (
-          <Image
-            src={item.src}
-            width={item.width}
-            height={item.height}
-            alt={item.alt}
-            className={`brightness-0 [&:not(:first-child)]:ml-[${marginLeft}px]`}
-            key={item.alt + idx}
-          ></Image>
-        ))}
-      </motion.div>
-    </section>
+    <>
+      <section className="hidden overflow-hidden h-[100px] relative md:flex  max-w-[100%] md:mt-[104px]">
+        <motion.div
+          className="absolute left-0 top-0 flex mt-[60px] md:mt-0 justify-between flex-wrap md:flex-nowrap gap-[32px] md:gap-0 pl-5 xl:pl-0 pr-5 xl:pr-0"
+          ref={ref}
+          style={{ x: xTranslation }}
+        >
+          {[...sponsors, ...sponsors].map((item, idx) => (
+            <Image
+              src={item.src}
+              width={item.width}
+              height={item.height}
+              alt={item.alt}
+              className="brightness-0 [&:not(:first-child)]:ml-[100px]"
+              key={item.alt + idx}
+            ></Image>
+          ))}
+        </motion.div>
+      </section>
+      <section className="flex relative md:hidden">
+        <div className="flex mt-[60px] justify-between flex-wrap gap-[32px] pl-5 pr-5">
+          {[...sponsors].map((item, idx) => (
+            <Image
+              src={item.src}
+              width={item.width}
+              height={item.height}
+              alt={item.alt}
+              className="brightness-0"
+              key={item.alt + idx}
+            ></Image>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
